@@ -34,6 +34,8 @@ func main() {
 
 	// 3. Peça ao usuário para digitar uma string e um caractere e retorne o número de ocorrências desse caractere na string.
 
+	var count int
+	
 	scanner := bufio.NewScanner(os.Stdin)
 
 	fmt.Print("Usuário, digite um texto, por favor: ")
@@ -53,6 +55,10 @@ func main() {
 		fmt.Printf("O texto não contém o caractere %s.", r)
 
 	}
+	
+	count = strings.Count(str, r)
+	
+	fmt.Printf(" O caractere %s aparece %d vezes no texto %s.", r, count, str)
 
 	// 4. Peça ao usuário para digitar uma string e retorne a mesma string com as letras em maiúsculo.
 
